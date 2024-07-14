@@ -69,6 +69,7 @@ function displayMeals(arr_list){
 
 
 function openSideNav() {
+  document.getElementById("inputs").classList.replace("z-3",'z-2')
   $(".side-nav").animate({
       left: 0
   }, 750)
@@ -98,6 +99,12 @@ function closeSideNav() {
   $(".black_nav .links li").animate({
       top: 1000
   }, 750)
+
+  setTimeout(()=>{
+    document.getElementById("inputs").classList.replace("z-2",'z-3')
+  },1000)
+  
+
 }
 
 
@@ -179,8 +186,8 @@ if (tagList[i]) {
   }
 
  function getSearchItems(){
-  document.getElementById("inputs").classList.replace("z-0",'z-2')
-  document.getElementById("nav").classList.replace("z-1",'z-3')
+
+  document.getElementById("nav").classList.replace("z-2",'z-3')
 var temp =`
         <div class="col-md-5 ">
             <input onkeyup="searchByName(this.value)" class="form-control search bg-transparent text-white" type="text" placeholder="Search By Name">
